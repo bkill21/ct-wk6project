@@ -1,0 +1,16 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+<h3>{{ user.username }}'s Heros</h3>
+
+{% for hero in user.heros %}
+  <h5>{{ hero.hero_name }}</h5>
+  <p>---</p>
+  <p>Power(s):<br>{{ hero.power }}</p>
+  <p>Lore:<br>{{ hero.hero_lore }}</p>
+  <small>Hero ID: {{ hero.hero_id }} | </small>
+  <small>Created By User #: {{ hero.user_id }} | </small>
+  <small>Creation Date: {{ hero.creation_date }}</small>
+  <p>================================================</p>
+{% endfor %}
+{% endblock %}

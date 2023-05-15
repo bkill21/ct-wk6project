@@ -1,0 +1,21 @@
+{% extends "base.jinja" %}
+
+{% block content  %}
+<form action="" method="post">
+ <h2>Create a new hero and add them to your team</h2>
+ {{ form.hidden_tag() }}
+ <p>
+    {{ form.hero.label }}<br>
+    {{ form.hero(size=32) }}
+ </p>
+ <p>
+    {{ form.power.label }}<br>
+    {{ form.power(size=32) }}
+ </p>
+ <p>
+    {{ form.lore.label }}<br>
+    {{ form.lore(size=100) }}
+ </p>
+ <p>{{ form.submit() }}</p>
+</form>
+{% endblock  %}
